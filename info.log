@@ -1,0 +1,197 @@
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"select * from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"records_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" - column gainz_records.records_owner does not exist","level":"error"}
+{"message":"select * from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"records_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" - column gainz_records.records_owner does not exist","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"select * from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"records_owner\" - column gainz_records.records_owner does not exist","level":"error"}
+{"message":"select * from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"records_owner\" - column gainz_records.records_owner does not exist","level":"error"}
+{"message":"select \"first_name\" from * inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" - syntax error at or near \"*\"","level":"error"}
+{"message":"select * from \"gainz_records\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" - table name \"gainz_records\" specified more than once","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routine_exercises\".\"routine_id\" = \"gainz_routines\".\"id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select * from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routine_exercises\".\"routine_id\" = \"gainz_routines\".\"id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routine_exercises\".\"routine_id\" = \"gainz_routines\".\"id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routines\".\"id\" = \"gainz_routine_exercises\".\"routine_id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routines\".\"id\" = \"gainz_routine_exercises\".\"routine_id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routines\".\"id\" = \"gainz_routine_exercises\".\"routine_id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routines\".\"id\" = \"gainz_routine_exercises\".\"routine_id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", \"exercise_id\", \"exercise_name\" from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routines\".\"id\" = \"gainz_routine_exercises\".\"routine_id\" inner join \"gainz_exercises\" on \"gainz_routine_excercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" - missing FROM-clause entry for table \"gainz_routine_excercises\"","level":"error"}
+{"message":"select \"gainz_routines\".\"id\", \"routine_name\", json_agg(json_object(gainz_routine_exercises.exercise_id, gainz_exercises.exercise_name)) as exercises from \"gainz_routines\" inner join \"gainz_routine_exercises\" on \"gainz_routines\".\"id\" = \"gainz_routine_exercises\".\"routine_id\" inner join \"gainz_exercises\" on \"gainz_routine_exercises\".\"exercise_id\" = \"gainz_exercises\".\"id\" group by \"gainz_routines\".\"id\", \"gainz_routines\".\"routine_name\" - function json_object(integer, text) does not exist","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date\" from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" - column gainz_records.date does not exist","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_exercises\".\"name\", \"gainz_records\".\"sets\" from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" - column gainz_exercises.name does not exist","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_exercises\".\"exercise_name\", \"gainz_records\".\"sets\", json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.weights) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_exercises\".\"exercise_name\", \"gainz_records\".\"sets\" - syntax error at or near \"as\"","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object('id', gainz_exercise.exercise_name), json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\" - missing FROM-clause entry for table \"gainz_exercise\"","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object('id', gainz_exercises.exercise_name) as exercise, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\" - column \"gainz_exercises.exercise_name\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object('id', gainz_exercises.exercise_name) as exercise, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\" - column \"gainz_exercises.exercise_name\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object('id', gainz_exercises.exercise_name) as exercise, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\" - column \"gainz_exercises.exercise_name\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"select \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object('id', gainz_exercises.exercise_name) as exercise, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"gainz_users\".\"id\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\" - column \"gainz_exercises.exercise_name\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"select \"gainz_users\".\"id\" as \"userId\", \"gainz_records\".\"id\" as \"recordId\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object(gainz_exercises.id, gainz_exercises.exercise_name) as exercise, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"userId\", \"recordId\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", \"gainz_exercises\".\"exercise_name\" - column \"gainz_exercises.id\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"select \"gainz_users\".\"id\" as \"userId\", \"gainz_records\".\"id\" as \"recordId\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", json_build_object('id', gainz_exercises.id,'name', gainz_exercises.exercise_name) as exercise, json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps, json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights from \"gainz_users\" inner join \"gainz_records\" on \"gainz_users\".\"id\" = \"gainz_records\".\"record_owner\" inner join \"gainz_exercises\" on \"gainz_records\".\"exercise_id\" = \"gainz_exercises\".\"id\" inner join \"gainz_record_sets\" on \"gainz_records\".\"id\" = \"gainz_record_sets\".\"record_id\" group by \"userId\", \"recordId\", \"gainz_users\".\"first_name\", \"gainz_users\".\"last_name\", \"gainz_records\".\"date_entered\", \"gainz_records\".\"sets\", \"gainz_exercises\".\"exercise_name\" - column \"gainz_exercises.id\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"insert into \"gainz_users\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - column \"date\" of relation \"gainz_users\" does not exist","level":"error"}
+{"message":"insert into \"gainz_users\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - column \"date\" of relation \"gainz_users\" does not exist","level":"error"}
+{"message":"insert into \"gainz_users\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - column \"date\" of relation \"gainz_users\" does not exist","level":"error"}
+{"message":"insert into \"gainz_users\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - column \"date\" of relation \"gainz_users\" does not exist","level":"error"}
+{"message":"insert into \"gainz_users\" (\"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - column \"exercise\" of relation \"gainz_users\" does not exist","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"insert into \"gainz_record\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - relation \"gainz_record\" does not exist","level":"error"}
+{"message":"insert into \"gainz_record\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - relation \"gainz_record\" does not exist","level":"error"}
+{"message":"insert into \"gainz_record\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - relation \"gainz_record\" does not exist","level":"error"}
+{"message":"insert into \"gainz_record\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - relation \"gainz_record\" does not exist","level":"error"}
+{"message":"insert into \"gainz_record\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - relation \"gainz_record\" does not exist","level":"error"}
+{"message":"select * from \"gainz_record\" - relation \"gainz_record\" does not exist","level":"error"}
+{"message":"insert into \"gainz_records\" (\"date\", \"exercise\", \"firstName\", \"lastName\", \"recordId\", \"reps\", \"sets\", \"userId\", \"weights\") values (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT) - column \"date\" of relation \"gainz_records\" does not exist","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"Cannot read property 'then' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"insert into \"gainz_records\" (\"exercise_id\", \"record_owner\", \"sets\") values (DEFAULT, DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"exercise_id\", \"record_owner\", \"sets\") values (DEFAULT, DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\") values (DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, DEFAULT) - null value in column \"sets\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, $1) - null value in column \"exercise_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, $1) - null value in column \"exercise_id\" violates not-null constraint","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"insert into \"gainz_records\" (\"record_owner\", \"sets\") values (DEFAULT, $1) - null value in column \"exercise_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"exercise_id\", \"record_owner\", \"sets\") values (DEFAULT, DEFAULT, $1) - null value in column \"exercise_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"exercise_id\", \"record_owner\", \"sets\") values (DEFAULT, DEFAULT, $1) - null value in column \"exercise_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_records\" (\"exercise_id\", \"record_owner\", \"sets\") values ($1, DEFAULT, $2) - invalid input syntax for type integer: \"{\"id\":1,\"name\":\"Bench press\"}\"","level":"error"}
+{"message":"insert into \"gainz_records\" (\"exercise_id\", \"record_owner\", \"sets\") values (DEFAULT, DEFAULT, $1) - null value in column \"exercise_id\" violates not-null constraint","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8), ($9, DEFAULT, $10, DEFAULT), ($11, DEFAULT, $12, DEFAULT) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - invalid input syntax for type integer: \"{\"set\":1,\"reps\":10}\"","level":"error"}
+{"message":"insert into \"gainz_record_sets\" (\"record_id\", \"reps\", \"set\", \"weights\") values ($1, $2, $3, $4), ($5, $6, $7, $8) - insert or update on table \"gainz_record_sets\" violates foreign key constraint \"gainz_record_sets_record_id_fkey\"","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}
+{"message":"Cannot read property 'userId' of undefined","level":"error"}
+{"message":"Cannot read property 'userId' of undefined","level":"error"}
+{"message":"Cannot read property 'userId' of undefined","level":"error"}
+{"message":"Cannot read property 'userId' of undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}
+{"message":"Cannot read property 'id' of undefined","level":"error"}
+{"message":"Cannot read property 'userId' of undefined","level":"error"}
+{"message":"Cannot read property 'userId' of undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}
+{"message":"The \"path\" argument must be of type string. Received undefined","level":"error"}

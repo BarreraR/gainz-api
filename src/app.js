@@ -6,6 +6,10 @@ const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const errorHandler = require('./error-handler');
 const validateBearerToken = require('./validate-bearer-token');
+const recordsRouter = require('./records/records-router');
+const routinesRouter = require('./routines/routines-router');
+const exercisesRouter = require('./exercises/exercises-router');
+
 
 const app = express();
 
@@ -16,7 +20,12 @@ const morganOption = (NODE_ENV === 'production')
 app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
-app.use(validateBearerToken);
+// app.use(validateBearerToken);
+
+app.use('/records', recordsRouter);
+app.use('/routines', routinesRouter);
+app.use('/exercises', exercisesRouter);
+
 
 app.get('/', (req, res) => {
   res.send('Hello, world!');
