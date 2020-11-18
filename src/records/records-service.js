@@ -24,29 +24,30 @@ const RecordsService = {
       return trx
         .insert(recsRec)
         .into('gainz_records')
-        .returning('id')
-        .then(function(id) {
+        .returning('*')
+        .then(function(record) {
           const recSetsRec = [];
-          console.log(id, id[0]);
           for(let i = 1; i <= newRecord.sets; i++){
             recSetsRec.push(
               {
                 set: i,
                 reps: newRecord.reps[newRecord.reps.findIndex(set => set.set === i)].reps,
                 weights: newRecord.weights[newRecord.weights.findIndex(set => set.set === i)].weights,
-                record_id: id[0]
+                record_id: record[0].id
               }
             );
           }
           
           return trx('gainz_record_sets')
             .insert(recSetsRec)
-            .returning('*');
+            .returning('*')
+            .then(recSets => {
+              record[0].sets = recSets;
+              console.log(recSets, 'recSets ');
+              return record;
+            });
         });
     })
-      // .then(function(inserts) {
-      //   console.log(inserts.length + ' new record saved.');
-      // })
       .catch(function(error){
         console.error(error);
       });

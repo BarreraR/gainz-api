@@ -31,10 +31,6 @@ recordsRouter
   .post(jsonParser, (req, res, next) =>  {
     const {
       userId,
-      // recordId,
-      // firstName,
-      // lastName,
-      // date,
       exercise,
       sets,
       reps,
@@ -42,10 +38,6 @@ recordsRouter
     } = req.body;
     const newRecord = {
       userId,
-      // recordId,
-      // firstName,
-      // lastName,
-      // date,
       exercise,
       sets,
       reps,
@@ -53,24 +45,22 @@ recordsRouter
     };
 
     for(const [key, value] of Object.entries(newRecord)) {
-      if(value === null){
+      if(value == null){
         return res.status(400).json({
           error: {message: `Missing '${key}' in request body`}
         });
       }
     }
 
-    // console.log('record', newRecord);
     // console.log(weights[weights.findIndex(set => set.set === 2)].weights);
     RecordsService.insertRecord(
       req.app.get('db'), 
       newRecord
     )
       .then(record =>{
-        console.log(req.originalUrl, 'oringal url request', record.id);
         res.status(201)
-          .location(path.posix.join(req.orginalUrl, `/${record.id}`))
-          .json(serializeRecord(record));
+          // .location(path.posix.join(req.orginalUrl, `/${record[0].id}`))
+          .json(record);
         console.log(record, 'line 74');
       })
       .catch(next);
