@@ -9,7 +9,7 @@ VALUES
   ('Dumbbell curl'),
   ('Hammer curl'),
   ('Incline bench press'),
-  ('Lat pulldowns'),
+  ('Lat pulldown'),
   ('Leg curl'),
   ('Leg extension'),
   ('Leg press'),
@@ -19,5 +19,5 @@ VALUES
   ('Shrug'),
   ('Squat'),
   ('Tricep extension'),
-  ('Triceps pushdown'),
+  ('Tricep pushdown'),
   ('Overhead press');
