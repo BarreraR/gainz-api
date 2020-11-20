@@ -3,7 +3,7 @@ const RecordsService = {
     return knex('gainz_users')
       .select(['gainz_users.id as userId', 'gainz_records.id as recordId', 'gainz_users.first_name', 'gainz_users.last_name', 
         'gainz_records.date_entered', 'gainz_records.sets', 
-        knex.raw("json_build_object('id', gainz_exercises.id,'name', gainz_exercises.exercise_name) as exercise"),
+        knex.raw("json_build_object('id', gainz_exercises.id,'exercise', gainz_exercises.exercise_name) as exercise"),
         knex.raw("json_agg(json_build_object('set', gainz_record_sets.set, 'reps', gainz_record_sets.reps)) as reps"),
         knex.raw("json_agg(json_build_object('set', gainz_record_sets.set, 'weights', gainz_record_sets.weights)) as weights")])
       .innerJoin('gainz_records', 'gainz_users.id', '=', 'gainz_records.record_owner')
@@ -16,7 +16,7 @@ const RecordsService = {
   insertRecord(knex, newRecord){
     return knex.transaction(function(trx) {
       const recsRec = {
-        exercise_id: newRecord.exercise,
+        exercise_id: newRecord.exercise.id,
         record_owner: newRecord.userId,
         sets: newRecord.sets
       };
