@@ -24,7 +24,10 @@ VALUES
 
 INSERT INTO gainz_users(first_name, last_name, username, password)
 VALUES
-  ('Ryan', 'Reynalds', 'RayRay123', 'password123');
+  ('Bob', 'Ross', 'MisterBobby', '$2a$12$sYQAuHCqKjHto/kTJT9qEOAW1qcwGgD1MUwg9Ox/cetjNuzhTZs9G');
+
+  -- password is Password@1
+
 
 INSERT INTO gainz_records(sets, exercise_id, record_owner)
 VALUES

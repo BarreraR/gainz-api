@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const xss = require('xss');
 const RecordsService = require('./records-service');
+const { requireAuth } = require('../middleware/jwt-auth');
 
 const recordsRouter = express.Router();
 const jsonParser = express.json();
@@ -20,8 +21,11 @@ const serializeRecord = record => ({
 
 recordsRouter
   .route('/')
+  .all(requireAuth)
+  // .all(checkRecordExists)
   .get((req, res, next) => {
     const knexInstance = req.app.get('db');
+    console.log('req ****' ,req, res);
     RecordsService.getAllRecords(knexInstance)
       .then(records => {
         res.json(records.map(serializeRecord));

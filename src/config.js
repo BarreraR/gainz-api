@@ -3,4 +3,5 @@ module.exports = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   DATABASE_URL: process.env.DATABASE_URL || 'postgresql://dunder_mifflin@localchost/gainz',
   TEST_DATABASE_URL: process.env.TETS_DATABASE_URL || 'postgresql://dunder_mifflin@localchost/gainz-test',
+  JWT_SECRET: process.env.JWT_SECRET || 'change-this-secret',
 };

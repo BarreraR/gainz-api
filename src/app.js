@@ -9,6 +9,8 @@ const validateBearerToken = require('./validate-bearer-token');
 const recordsRouter = require('./records/records-router');
 const routinesRouter = require('./routines/routines-router');
 const exercisesRouter = require('./exercises/exercises-router');
+const usersRouter = require('./users/users-router');
+const authRouter = require('./auth/auth-router');
 
 
 const app = express();
@@ -25,6 +27,8 @@ app.use(cors());
 app.use('/records', recordsRouter);
 app.use('/routines', routinesRouter);
 app.use('/exercises', exercisesRouter);
+app.use('/users', usersRouter);
+app.use('/auth', authRouter);
 
 
 app.get('/', (req, res) => {
