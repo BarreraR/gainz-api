@@ -25,7 +25,7 @@ recordsRouter
   // .all(checkRecordExists)
   .get((req, res, next) => {
     const knexInstance = req.app.get('db');
-    console.log('req ****' ,req, res);
+    console.log('req ****' , req.user);
     RecordsService.getAllRecords(knexInstance)
       .then(records => {
         res.json(records.map(serializeRecord));
