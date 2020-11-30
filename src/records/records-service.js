@@ -1,5 +1,5 @@
 const RecordsService = {
-  getAllRecords(knex) {
+  getAllRecords(knex, id) {
     return knex('gainz_users')
       .select(['gainz_users.id as userId', 'gainz_records.id as recordId', 'gainz_users.first_name', 'gainz_users.last_name', 
         'gainz_records.date_entered', 'gainz_records.sets', 
@@ -9,6 +9,7 @@ const RecordsService = {
       .innerJoin('gainz_records', 'gainz_users.id', '=', 'gainz_records.record_owner')
       .innerJoin('gainz_exercises', 'gainz_records.exercise_id', '=', 'gainz_exercises.id')
       .innerJoin('gainz_record_sets', 'gainz_records.id', '=', 'gainz_record_sets.record_id')
+      .where('gainz_users.id', '=', id)
       .groupBy('userId', 'recordId', 'gainz_users.first_name', 'gainz_users.last_name', 
         'gainz_records.date_entered', 'gainz_records.sets', 'gainz_exercises.exercise_name','gainz_exercises.id');
   },

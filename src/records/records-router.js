@@ -26,7 +26,7 @@ recordsRouter
   .get((req, res, next) => {
     const knexInstance = req.app.get('db');
     console.log('req ****' , req.user);
-    RecordsService.getAllRecords(knexInstance)
+    RecordsService.getAllRecords(knexInstance, req.user.id)
       .then(records => {
         res.json(records.map(serializeRecord));
       })
@@ -34,14 +34,12 @@ recordsRouter
   })
   .post(jsonParser, (req, res, next) =>  {
     const {
-      userId,
       exercise,
       sets,
       reps,
       weights 
     } = req.body;
     const newRecord = {
-      userId,
       exercise,
       sets,
       reps,
@@ -55,8 +53,7 @@ recordsRouter
         });
       }
     }
-
-    // console.log(weights[weights.findIndex(set => set.set === 2)].weights);
+    newRecord.userId = req.user.id;
     RecordsService.insertRecord(
       req.app.get('db'), 
       newRecord

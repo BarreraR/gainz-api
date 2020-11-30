@@ -1,5 +1,6 @@
 const express = require('express');
 const xss = require('xss');
+const { requireAuth } = require('../middleware/jwt-auth');
 const RoutinesService = require('./routines-service');
 
 const routinesRouter = express.Router();
@@ -15,9 +16,10 @@ const serializeRoutine = routine => ({
 
 routinesRouter
   .route('/')
+  .all(requireAuth)
   .get((req, res, next) => {
     const knexInstance = req.app.get('db');
-    RoutinesService.getAllRoutines(knexInstance)
+    RoutinesService.getAllRoutines(knexInstance, req.user.id)
       .then(routines => {
         res.json(routines.map(serializeRoutine));
       })
@@ -25,13 +27,11 @@ routinesRouter
   })
   .post(jsonParser, (req, res, next) => {
     const {
-      owner,
       name,
       exercises
     } = req.body;
 
     const newRoutine = {
-      owner,
       name,
       exercises
     };
@@ -44,6 +44,7 @@ routinesRouter
       }
     }
 
+    newRoutine.owner = req.user.id;
     RoutinesService.insertRoutine(
       req.app.get('db'),
       newRoutine
