@@ -24,7 +24,7 @@ VALUES
 
 INSERT INTO gainz_users(first_name, last_name, username, password)
 VALUES
-  ('Bob', 'Ross', 'MisterBobby', '$2a$12$sYQAuHCqKjHto/kTJT9qEOAW1qcwGgD1MUwg9Ox/cetjNuzhTZs9G');
+  ('Test', 'User', 'User1', '$2a$12$sYQAuHCqKjHto/kTJT9qEOAW1qcwGgD1MUwg9Ox/cetjNuzhTZs9G');
 
   -- password is Password@1
 

@@ -9,8 +9,7 @@ const jsonParser = express.json();
 const serializeRoutine = routine => ({
   id: routine.id,
   owner: routine.routine_owner,
-  name: routine.routine_name,
-  // exercise_id: routine.exercise_id,
+  name: xss(routine.routine_name),
   exercises: routine.exercises
 });
 

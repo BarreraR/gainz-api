@@ -44,7 +44,6 @@ const RecordsService = {
             .returning('*')
             .then(recSets => {
               record[0].sets = recSets;
-              console.log(recSets, 'recSets ');
               return record;
             });
         });

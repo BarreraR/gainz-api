@@ -14,18 +14,16 @@ const serializeRecord = record => ({
   lastName: record.last_name,
   date: record.date_entered,
   exercise: record.exercise,
-  sets: record.sets,
-  reps: record.reps,
-  weights: record.weights 
+  sets: xss(record.sets),
+  reps: xss(record.reps),
+  weights: xss(record.weights) 
 });
 
 recordsRouter
   .route('/')
   .all(requireAuth)
-  // .all(checkRecordExists)
   .get((req, res, next) => {
     const knexInstance = req.app.get('db');
-    console.log('req ****' , req.user);
     RecordsService.getAllRecords(knexInstance, req.user.id)
       .then(records => {
         res.json(records.map(serializeRecord));
@@ -62,7 +60,6 @@ recordsRouter
         res.status(201)
           // .location(path.posix.join(req.orginalUrl, `/${record[0].id}`))
           .json(record);
-        console.log(record, 'line 74');
       })
       .catch(next);
   });

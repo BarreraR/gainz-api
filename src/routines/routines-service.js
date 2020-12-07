@@ -33,7 +33,6 @@ const RoutinesService = {
           .returning('*')
           .then(r => {
             routine[0].exercises = r;
-            console.log(routine[0]);
             return routine;
           });
         })
