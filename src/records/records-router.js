@@ -1,6 +1,5 @@
 const path = require('path');
 const express = require('express');
-const xss = require('xss');
 const RecordsService = require('./records-service');
 const { requireAuth } = require('../middleware/jwt-auth');
 
@@ -14,9 +13,9 @@ const serializeRecord = record => ({
   lastName: record.last_name,
   date: record.date_entered,
   exercise: record.exercise,
-  sets: xss(record.sets),
-  reps: xss(record.reps),
-  weights: xss(record.weights) 
+  sets: record.sets,
+  reps: record.reps,
+  weights: record.weights 
 });
 
 recordsRouter
