@@ -314,3 +314,7 @@
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [username] query: select * from \"gainz_users\" where \"username\" = ? limit ?","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [username] query: select * from \"gainz_users\" where \"username\" = ? limit ?","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [username] query: select * from \"gainz_users\" where \"username\" = ? limit ?","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
