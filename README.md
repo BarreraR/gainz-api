@@ -21,8 +21,17 @@ BASE URL: https://cryptic-fortress-74151.herokuapp.com
 
 *Responds with an array of exercises.*
 
+Example request:
+```
+GET https://cryptic-fortress-74151.herokuapp.com/exercises
+  HEADERS: 
+    {
+      'content-type': 'application/json',
+    }
+```
 Example response: 
 ```
+STATUS: 200 OK
 [
   {
       'id': 1,
